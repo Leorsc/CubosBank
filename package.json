@@ -1,0 +1,27 @@
+{
+  "name": "cubosbank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leorsc/CubosBank.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leorsc/CubosBank/issues"
+  },
+  "homepage": "https://github.com/Leorsc/CubosBank#readme",
+  "dependencies": {
+    "date-fns": "^2.29.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
