@@ -1,4 +1,4 @@
-let bancoDeDados = require('../database/bancoDeDados.json');
+const bancoDeDados = require('../database/database.json');
 const { format } = require('date-fns');
 const fs = require('fs/promises');
 const { writeFilebancoDeDados,
@@ -20,7 +20,8 @@ const { writeFilebancoDeDados,
     transacoesDeposito,
     transacoesSaque,
     transacoesTransferenciasRecebidas,
-    transacoesTransferenciasEnviadas } = require('../functions/funcoesGerais');
+    transacoesTransferenciasEnviadas
+} = require('../functions/generalFunctions');
 
 
 const cadastrarContaBancaria = (req, res) => {
@@ -32,9 +33,9 @@ const cadastrarContaBancaria = (req, res) => {
         return res.status(400).json("Todos os campos são obrigatorios");
     }
 
-    const CPFValidacao = validarCPF(cpf);
+    const cpfValidacao = validarCPF(cpf);
 
-    if (!CPFValidacao) {
+    if (!cpfValidacao) {
         return res.status(400).json("Tamanho do CPF está incorreto");
     }
 

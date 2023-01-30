@@ -1,6 +1,6 @@
 const express = require("express");
-const { cadastrarContaBancaria, listarContasBancarias, atualizarDadosContaBancaria, deletarContaBancaria, depositar, sacar, transferir, saldo, extrato, validarSenhaConta } = require("../controller/contas");
-const { validarSenhaBanco } = require("../middleware/validadorDeSenha");
+const { cadastrarContaBancaria, listarContasBancarias, atualizarDadosContaBancaria, deletarContaBancaria, depositar, sacar, transferir, saldo, extrato, validarSenhaConta } = require("../controller/accounts");
+const { validarSenhaBanco } = require("../middleware/passwordValidator");
 const fs = require('fs/promises');
 
 
