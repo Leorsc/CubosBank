@@ -1,13 +1,33 @@
-# CubosBank
+# Cubos Bank
 
-## API RESTful, permite:
+### Vamos construir uma API de cadastros de usuarios, para um sistema de banco.
 
-- Criar conta bancária
-- Listar contas bancárias
-- Atualizar os dados do usuário da conta bancária
-- Excluir uma conta bancária
-- Depósitar em uma conta bancária
-- Sacar de uma conta bancária
-- Transferir valores entre contas bancárias
-- Consultar saldo da conta bancária
-- Emitir extrato bancário
+Precisamos construir endpoints com `express` seguindo padrao `REST` para executar as seguintes funcoes:
+
+- Usuarios
+    - Cadastrar usuario
+        - Nome
+        - CPF (único)
+        - Data de nascimento
+        - Telefone
+        - E-mail (único)
+        - Senha
+    - Atualizar informações de usuario
+    - Deletar usuario
+    - Listar contas bancárias
+
+Com o usuario já cadastrado, este poderá realizar transações:
+
+- Contas
+    - Depositar
+    - Sacar
+    - Transferir
+    - Verificar saldo disponível
+    - Extrato transações
+
+## Regras da API
+
+- O email e CPF das contas cadastradas deve ser único
+- Todas as contas devem ter obrigatoriamente, `nome`, `CPF`, `data de nascimento`, `telefone` ,`email` e `senha`
+- Todas os valores de transação devem ser feitos em centavos
+- Para realizar transaferencias é necessário informar conta de origem e conta de destino
